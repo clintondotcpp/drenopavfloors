@@ -189,7 +189,11 @@ const CostEstimator = () => {
                     </div>
 
                     <div className="space-y-3">
-                      <Button className="w-full bg-gradient-premium" size="lg">
+                      <Button 
+                        className="w-full bg-gradient-premium" 
+                        size="lg"
+                        onClick={() => window.open(`https://wa.me/2348026318818?text=Hello! I would like a detailed quote for ${estimate.area} sqm of ${estimate.finishName} Drenopav flooring. Estimated cost: ${formatCurrency(estimate.totalCost)}`, '_blank')}
+                      >
                         Get Detailed Quote
                       </Button>
                       <Button variant="outline" className="w-full" size="lg">

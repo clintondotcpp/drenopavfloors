@@ -1,0 +1,141 @@
+export interface BlogPost {
+  slug: string;
+  title: string;
+  excerpt: string;
+  content: string;
+  author: string;
+  publishedDate: string;
+  readTime: string;
+  tags: string[];
+  category: string;
+  featured: boolean;
+  image?: string;
+}
+
+export const blogPosts: BlogPost[] = [
+  {
+    slug: "why-drenopav-permeable-floors-future-landscaping-nigeria",
+    title: "Why Drenopav Permeable Floor Surfaces Are the Future of Landscaping in Nigeria",
+    excerpt: "Discover how Drenopav combines luxury aesthetics with environmental sustainability to solve Nigeria's flooding challenges while adding lasting value to your property.",
+    content: `
+When you think about landscaping in Nigeria, what comes to mind? For most people, it's about beauty: a clean driveway, a stunning patio, or a welcoming walkway that sets the tone for the home or business. But in today's world, landscaping is no longer just about looking good. It's about combining aesthetics with durability, sustainability, and real long-term value.
+
+That's where **Drenopav permeable floor surfaces** come in.
+
+More than just another flooring option, Drenopav represents a **new standard for landscaping in Nigeria**—a perfect blend of elegance, strength, and environmental responsibility. Whether you're a homeowner trying to enhance your property or a business owner looking to make a lasting impression, here's why Drenopav should be your first choice.
+
+## 1. A Luxurious Finish That Elevates Any Property
+
+First impressions matter. The exterior of your property is the first thing visitors, customers, or potential buyers see. Unfortunately, traditional options like plain concrete, tiles, or interlocking stones often fall short. They crack, fade, and lose their appeal over time.
+
+Drenopav permeable floor surfaces are different. Made with carefully selected decorative stones bound into a smooth, seamless finish, they give any space a **luxury look that stands out instantly**. Driveways become showcase entrances, walkways feel like boutique hotel paths, and patios transform into lifestyle spaces.
+
+It's not just flooring—it's a statement.
+
+## 2. Strength You Can Depend On
+
+Looks are important, but strength is non-negotiable. In Nigeria, we deal with heavy vehicles, unpredictable weather, and constant wear and tear. Many traditional flooring solutions simply aren't built to handle it.
+
+Drenopav permeable floor surfaces are engineered to withstand **loads of up to 5 tons** when installed correctly. That means your SUVs, delivery vans, and even commercial traffic can move across the surface without damage. No cracks, no loose stones, no endless repairs.
+
+This is landscaping that doesn't just look good on day one—it stays strong for years to come.
+
+## 3. Designed for Nigeria's Rainfall and Flooding Challenges
+
+Let's face it: flooding is one of Nigeria's biggest urban problems. Every rainy season, we see streets, compounds, and business premises overwhelmed with water that has nowhere to go. Traditional flooring materials—concrete, asphalt, tiles—only make the problem worse because they trap water on the surface.
+
+Drenopav permeable floor surfaces solve this problem by being fully **water-permeable**. Rainwater flows naturally through the surface into the ground below, reducing surface runoff and helping to prevent flooding.
+
+For homeowners, this means no more pools of water around your driveway or patio. For business owners, it means a safer, more reliable environment for customers and staff. And for the bigger picture? It's a step toward a smarter, more sustainable Nigeria.
+
+## 4. Low Maintenance, High Return
+
+Anyone who has had to scrub, seal, or replace old tiles and interlocking stones knows the headache of maintenance. With Drenopav, maintenance is practically effortless. A quick wash with a hose or a pressure washer is enough to keep the surface looking as good as new.
+
+No weeds growing through the cracks.
+No fading colors.
+No costly repairs every rainy season.
+
+Over time, this doesn't just save money—it also preserves the **long-term value of your property**, making it more attractive to buyers, tenants, or clients.
+
+## 5. Eco-Friendly and Sustainable
+
+Sustainability isn't just a buzzword anymore. Around the world, and increasingly here in Nigeria, people are making choices that are better for the environment. Drenopav permeable floor surfaces are designed with that in mind.
+
+By allowing water to pass through naturally, they reduce pressure on urban drainage systems and help replenish groundwater. Unlike concrete, which contributes to heat buildup, Drenopav surfaces also contribute to a cooler, more balanced environment around your home or business.
+
+It's landscaping that looks after you—and the planet.
+
+## 6. Versatility for Every Project
+
+One of the biggest advantages of Drenopav permeable floor surfaces is their versatility. They're not limited to driveways. Homeowners and business owners across Nigeria are using them for:
+
+* **Driveways and Car Parks** – Durable, elegant, and flood-resistant.
+* **Walkways and Pathways** – Smooth, stylish surfaces that impress visitors.
+* **Patios and Outdoor Living Spaces** – Turn your backyard into a lifestyle experience.
+* **Pool Surrounds** – Non-slip, beautiful finishes for safer and more attractive pool areas.
+* **Commercial Spaces** – From hotels to office buildings, they elevate the customer experience.
+
+No matter the project, there's a Drenopav finish that fits.
+
+## 7. An Investment That Pays for Itself
+
+Choosing Drenopav permeable floor surfaces is not just a design decision—it's a financial one. While the initial investment may be higher than cheaper alternatives, the return is undeniable.
+
+* Your property value increases thanks to the luxury aesthetic.
+* Maintenance costs drop dramatically.
+* The durability means you won't be paying for constant repairs.
+* The eco-friendly design makes your property more attractive in a future where sustainability is non-negotiable.
+
+In short, it's a smarter way to spend your money.
+
+## 8. The Drenopav Experience
+
+Finally, let's not forget what truly makes Drenopav unique: the experience. From the consultation to the design and installation, clients don't just get a floor—they get a premium service tailored to their needs.
+
+The attention to detail, the professionalism of the installation team, and the pride in every completed project all reflect a commitment to **luxury, trust, and excellence**. That's why more homeowners and businesses across Nigeria are turning to Drenopav for their landscaping solutions.
+
+## Conclusion: Landscaping for the Future
+
+In today's Nigeria, where property owners face challenges of flooding, durability, and rising expectations of style, **Drenopav permeable floor surfaces are the clear choice**. They combine the beauty of natural stone with the strength of engineering, the elegance of modern design with the responsibility of sustainability.
+
+For homeowners, it means a more valuable, beautiful, and flood-resistant property. For business owners, it means making a bold statement that attracts and reassures customers.
+
+This isn't just landscaping. It's the **future of flooring in Nigeria**.
+
+**Ready to transform your property with Drenopav permeable floor surfaces?**
+Book your consultation today and experience the perfect balance of luxury, durability, and sustainability.
+    `,
+    author: "Duruco Concept Limited",
+    publishedDate: "2024-09-12",
+    readTime: "8 min read",
+    tags: ["drenopav", "permeable flooring", "sustainable construction", "nigeria", "flooding solutions", "luxury landscaping"],
+    category: "Industry Insights",
+    featured: true,
+    image: "/lovable-uploads/12d9d3d9-76b8-4759-8992-3c78731e826e.png"
+  }
+];
+
+export function getAllBlogPosts(): BlogPost[] {
+  return blogPosts.sort((a, b) => new Date(b.publishedDate).getTime() - new Date(a.publishedDate).getTime());
+}
+
+export function getFeaturedBlogPosts(): BlogPost[] {
+  return blogPosts.filter(post => post.featured);
+}
+
+export function getBlogPost(slug: string): BlogPost | null {
+  return blogPosts.find(post => post.slug === slug) || null;
+}
+
+export function getAllBlogSlugs(): string[] {
+  return blogPosts.map(post => post.slug);
+}
+
+export function getBlogPostsByCategory(category: string): BlogPost[] {
+  return blogPosts.filter(post => post.category === category);
+}
+
+export function getBlogPostsByTag(tag: string): BlogPost[] {
+  return blogPosts.filter(post => post.tags.includes(tag));
+}

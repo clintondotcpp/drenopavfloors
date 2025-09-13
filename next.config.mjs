@@ -1,9 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',
+  // Enable standalone output for OpenNext
+  output: 'standalone',
   trailingSlash: true,
   skipTrailingSlashRedirect: true,
-  distDir: 'dist',
   images: {
     unoptimized: true
   }

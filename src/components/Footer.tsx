@@ -85,19 +85,19 @@ const Footer = () => {
               <div className="flex items-start space-x-3">
                 <Phone className="h-4 w-4 text-primary-foreground/80 mt-1 flex-shrink-0" />
                 <div className="text-sm">
-                  <p className="text-primary-foreground/80">+234 xxx xxxx xxx</p>
+                  <p className="text-primary-foreground/80">+234 802 631 8818</p>
                 </div>
               </div>
               <div className="flex items-start space-x-3">
                 <Mail className="h-4 w-4 text-primary-foreground/80 mt-1 flex-shrink-0" />
                 <div className="text-sm">
-                  <p className="text-primary-foreground/80">info@drenopav.ng</p>
+                  <p className="text-primary-foreground/80">durucoenter12@gmail.com</p>
                 </div>
               </div>
               <div className="flex items-start space-x-3">
                 <MapPin className="h-4 w-4 text-primary-foreground/80 mt-1 flex-shrink-0" />
                 <div className="text-sm">
-                  <p className="text-primary-foreground/80">Nationwide Service<br />Lagos • Abuja • PHC</p>
+                  <p className="text-primary-foreground/80">No. 181, Anwal Inland Road<br />Ugbolu, Asaba, Delta State</p>
                 </div>
               </div>
             </div>

@@ -28,20 +28,49 @@ const Contact = () => {
     message: ''
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    toast({
-      title: "Thank you for your inquiry!",
-      description: "We'll contact you within 24 hours to discuss your project.",
-    });
-    // Reset form
-    setFormData({
-      name: '',
-      email: '',
-      phone: '',
-      projectType: '',
-      message: ''
-    });
+    setIsSubmitting(true);
+
+    try {
+      const response = await fetch('/api/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          ...formData,
+          type: 'contact'
+        }),
+      });
+
+      if (response.ok) {
+        toast({
+          title: "Thank you for your inquiry!",
+          description: "We'll contact you within 24 hours to discuss your project.",
+        });
+        // Reset form
+        setFormData({
+          name: '',
+          email: '',
+          phone: '',
+          projectType: '',
+          message: ''
+        });
+      } else {
+        throw new Error('Failed to send message');
+      }
+    } catch (error) {
+      toast({
+        title: "Message failed to send",
+        description: "Please try again or contact us directly via WhatsApp.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -149,8 +178,12 @@ const Contact = () => {
                   </div>
                   
                   <div className="flex flex-col sm:flex-row gap-4">
-                    <Button type="submit" className="bg-gradient-premium hover:opacity-90 transition-opacity flex-1">
-                      Request Free Consultation
+                    <Button 
+                      type="submit" 
+                      disabled={isSubmitting}
+                      className="bg-gradient-premium hover:opacity-90 transition-opacity flex-1"
+                    >
+                      {isSubmitting ? 'Sending...' : 'Request Free Consultation'}
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </Button>
                     <Button type="button" variant="outline" className="flex items-center space-x-2">
@@ -173,6 +206,7 @@ const Contact = () => {
                   <Button 
                     className="w-full bg-secondary text-secondary-foreground hover:bg-secondary/90 justify-start"
                     size="lg"
+                    onClick={() => window.open('https://wa.me/2348026318818?text=Hello! I would like to inquire about Drenopav permeable floor surfaces.', '_blank')}
                   >
                     <MessageCircle className="mr-3 h-5 w-5" />
                     WhatsApp Chat
@@ -181,6 +215,7 @@ const Contact = () => {
                     variant="outline" 
                     className="w-full border-primary-foreground/30 text-secondary-foreground hover:bg-primary-foreground/10 justify-start"
                     size="lg"
+                    onClick={() => window.open('tel:+2348026318818', '_self')}
                   >
                     <Phone className="mr-3 h-5 w-5" />
                     Call Now
@@ -198,21 +233,22 @@ const Contact = () => {
                     <Phone className="h-5 w-5 text-primary mt-1" />
                     <div>
                       <p className="font-semibold text-foreground">Phone</p>
-                      <p className="text-muted-foreground text-sm">+234 xxx xxxx xxx</p>
+                      <p className="text-muted-foreground text-sm">+234 802 631 8818</p>
                     </div>
                   </div>
                   <div className="flex items-start space-x-3">
                     <Mail className="h-5 w-5 text-primary mt-1" />
                     <div>
                       <p className="font-semibold text-foreground">Email</p>
-                      <p className="text-muted-foreground text-sm">info@drenopav.ng</p>
+                      <p className="text-muted-foreground text-sm">durucoenter12@gmail.com</p>
                     </div>
                   </div>
                   <div className="flex items-start space-x-3">
                     <MapPin className="h-5 w-5 text-primary mt-1" />
                     <div>
-                      <p className="font-semibold text-foreground">Service Areas</p>
-                      <p className="text-muted-foreground text-sm">Lagos, Abuja, Port Harcourt, Kano & Nationwide</p>
+                      <p className="font-semibold text-foreground">Address</p>
+                      <p className="text-muted-foreground text-sm">No. 181, Anwal Inland Road, Ugbolu, Asaba, Delta State, Nigeria</p>
+                      <p className="text-muted-foreground text-sm mt-1"><strong>Service Areas:</strong> Lagos, Abuja, Port Harcourt, Kano & Nationwide</p>
                     </div>
                   </div>
                   <div className="flex items-start space-x-3">
@@ -250,6 +286,7 @@ const Contact = () => {
             size="lg" 
             className="bg-green-500 hover:bg-green-600 text-white rounded-full w-14 h-14 shadow-luxury"
             aria-label="Contact us on WhatsApp"
+            onClick={() => window.open('https://wa.me/2348026318818?text=Hello! I would like to inquire about Drenopav permeable floor surfaces.', '_blank')}
           >
             <MessageCircle className="h-6 w-6" />
           </Button>

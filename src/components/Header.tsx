@@ -22,22 +22,31 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-8">
-            <a href="#home" className="text-foreground hover:text-primary transition-colors">Home</a>
-            <a href="#showcase" className="text-foreground hover:text-primary transition-colors">Showcase</a>
-            <a href="#benefits" className="text-foreground hover:text-primary transition-colors">Benefits</a>
-            <a href="#estimator" className="text-foreground hover:text-primary transition-colors">Cost Estimator</a>
-            <a href="#projects" className="text-foreground hover:text-primary transition-colors">Projects</a>
-            <a href="#about" className="text-foreground hover:text-primary transition-colors">About</a>
-            <a href="#contact" className="text-foreground hover:text-primary transition-colors">Contact</a>
+            <a href="/#home" className="text-foreground hover:text-primary transition-colors">Home</a>
+            <a href="/#showcase" className="text-foreground hover:text-primary transition-colors">Showcase</a>
+            <a href="/#benefits" className="text-foreground hover:text-primary transition-colors">Benefits</a>
+            <a href="/#estimator" className="text-foreground hover:text-primary transition-colors">Cost Estimator</a>
+            <a href="/#projects" className="text-foreground hover:text-primary transition-colors">Projects</a>
+            <a href="/blog" className="text-foreground hover:text-primary transition-colors">Blog</a>
+            <a href="/#about" className="text-foreground hover:text-primary transition-colors">About</a>
+            <a href="/#contact" className="text-foreground hover:text-primary transition-colors">Contact</a>
           </nav>
 
           {/* Desktop CTAs */}
           <div className="hidden lg:flex items-center space-x-4">
-            <Button variant="outline" size="sm" className="flex items-center space-x-2">
+            <Button 
+              variant="outline" 
+              size="sm" 
+              className="flex items-center space-x-2"
+              onClick={() => window.open('tel:+2348026318818', '_self')}
+            >
               <Phone className="h-4 w-4" />
               <span>Call Now</span>
             </Button>
-            <Button className="flex items-center space-x-2 bg-gradient-premium">
+            <Button 
+              className="flex items-center space-x-2 bg-gradient-premium"
+              onClick={() => window.open('https://wa.me/2348026318818?text=Hello! I would like to inquire about Drenopav permeable floor surfaces.', '_blank')}
+            >
               <MessageCircle className="h-4 w-4" />
               <span>WhatsApp</span>
             </Button>
@@ -57,20 +66,29 @@ const Header = () => {
         {isMenuOpen && (
           <div className="lg:hidden mt-4 py-4 border-t border-border">
             <nav className="flex flex-col space-y-4">
-              <a href="#home" className="text-foreground hover:text-primary transition-colors py-2" onClick={() => setIsMenuOpen(false)}>Home</a>
-              <a href="#showcase" className="text-foreground hover:text-primary transition-colors py-2" onClick={() => setIsMenuOpen(false)}>Showcase</a>
-              <a href="#benefits" className="text-foreground hover:text-primary transition-colors py-2" onClick={() => setIsMenuOpen(false)}>Benefits</a>
-              <a href="#estimator" className="text-foreground hover:text-primary transition-colors py-2" onClick={() => setIsMenuOpen(false)}>Cost Estimator</a>
-              <a href="#projects" className="text-foreground hover:text-primary transition-colors py-2" onClick={() => setIsMenuOpen(false)}>Projects</a>
-              <a href="#about" className="text-foreground hover:text-primary transition-colors py-2" onClick={() => setIsMenuOpen(false)}>About</a>
-              <a href="#contact" className="text-foreground hover:text-primary transition-colors py-2" onClick={() => setIsMenuOpen(false)}>Contact</a>
+              <a href="/#home" className="text-foreground hover:text-primary transition-colors py-2" onClick={() => setIsMenuOpen(false)}>Home</a>
+              <a href="/#showcase" className="text-foreground hover:text-primary transition-colors py-2" onClick={() => setIsMenuOpen(false)}>Showcase</a>
+              <a href="/#benefits" className="text-foreground hover:text-primary transition-colors py-2" onClick={() => setIsMenuOpen(false)}>Benefits</a>
+              <a href="/#estimator" className="text-foreground hover:text-primary transition-colors py-2" onClick={() => setIsMenuOpen(false)}>Cost Estimator</a>
+              <a href="/#projects" className="text-foreground hover:text-primary transition-colors py-2" onClick={() => setIsMenuOpen(false)}>Projects</a>
+              <a href="/blog" className="text-foreground hover:text-primary transition-colors py-2" onClick={() => setIsMenuOpen(false)}>Blog</a>
+              <a href="/#about" className="text-foreground hover:text-primary transition-colors py-2" onClick={() => setIsMenuOpen(false)}>About</a>
+              <a href="/#contact" className="text-foreground hover:text-primary transition-colors py-2" onClick={() => setIsMenuOpen(false)}>Contact</a>
             </nav>
             <div className="flex flex-col space-y-3 mt-4 pt-4 border-t border-border">
-              <Button variant="outline" size="sm" className="flex items-center justify-center space-x-2">
+              <Button 
+                variant="outline" 
+                size="sm" 
+                className="flex items-center justify-center space-x-2"
+                onClick={() => window.open('tel:+2348026318818', '_self')}
+              >
                 <Phone className="h-4 w-4" />
                 <span>Call Now</span>
               </Button>
-              <Button className="flex items-center justify-center space-x-2 bg-gradient-premium">
+              <Button 
+                className="flex items-center justify-center space-x-2 bg-gradient-premium"
+                onClick={() => window.open('https://wa.me/2348026318818?text=Hello! I would like to inquire about Drenopav permeable floor surfaces.', '_blank')}
+              >
                 <MessageCircle className="h-4 w-4" />
                 <span>WhatsApp</span>
               </Button>

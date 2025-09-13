@@ -5,6 +5,7 @@ import Benefits from '@/components/Benefits';
 import CostEstimator from '@/components/CostEstimator';
 import ProjectGallery from '@/components/ProjectGallery';
 import About from '@/components/About';
+import BlogPreview from '@/components/BlogPreview';
 import FAQ from '@/components/FAQ';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
@@ -20,6 +21,7 @@ export default function Home() {
         <CostEstimator />
         <ProjectGallery />
         <About />
+        <BlogPreview />
         <FAQ />
         <Contact />
       </main>
