@@ -136,3 +136,5 @@ dist
 
 # Deployment
 .vercel
+
+.open-next

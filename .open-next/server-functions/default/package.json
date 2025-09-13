@@ -10,7 +10,7 @@
     "preview": "next start",
     "cloudflare:build": "npx @opennextjs/cloudflare@latest build --skipBuild",
     "preview:cloudflare": "npm run cloudflare:build && wrangler pages dev .open-next/assets --compatibility-date=2024-09-12 --compatibility-flags=nodejs_compat",
-    "deploy": "npm run build && npm run cloudflare:build && wrangler deploy .open-next/worker.js",
+    "deploy": "npm run build && npm run cloudflare:build && wrangler deploy",
     "deploy:prod": "npm run cloudflare:build && wrangler pages deploy .open-next/assets --project-name drenopavfloors"
   },
   "dependencies": {

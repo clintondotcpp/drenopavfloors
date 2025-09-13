@@ -51,7 +51,7 @@ export async function POST(req: NextRequest) {
 
     // Send email using Resend
     const { data, error } = await resend.emails.send({
-      from: 'Drenopav Contact Form <noreply@drenopavfloors.ng>',
+      from: 'Drenopav Contact Form <hello@emails.drenopavfloors.ng>',
       to: ['durucoenter12@gmail.com'],
       subject: emailSubject,
       html: emailHtml,

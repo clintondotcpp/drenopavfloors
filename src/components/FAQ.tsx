@@ -1,3 +1,5 @@
+"use client";
+
 import { 
   Accordion,
   AccordionContent,
@@ -105,6 +107,7 @@ const FAQ = () => {
             <Button 
               size="lg" 
               className="bg-secondary text-secondary-foreground hover:bg-secondary/90 transition-colors"
+              onClick={() => window.open('https://wa.me/2348026318818?text=Hello! I have questions about Drenopav permeable floor surfaces and would like to chat with an expert.', '_blank')}
             >
               <MessageCircle className="mr-2 h-5 w-5" />
               Chat with Expert
@@ -113,6 +116,7 @@ const FAQ = () => {
               variant="outline" 
               size="lg"
               className="border-primary-foreground/30 text-secondary-foreground hover:bg-primary-foreground/10"
+              onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
             >
               Schedule Call Back
             </Button>
@@ -131,10 +135,19 @@ const FAQ = () => {
               </p>
             </div>
             <div className="flex flex-col sm:flex-row gap-3">
-              <Button variant="secondary" size="sm">
-                Call: +234 xxx xxxx xxx
+              <Button 
+                variant="secondary" 
+                size="sm"
+                onClick={() => window.open('tel:+2348026318818', '_self')}
+              >
+                Call: +234 802 631 8818
               </Button>
-              <Button variant="outline" size="sm" className="border-accent-foreground/30">
+              <Button 
+                variant="outline" 
+                size="sm" 
+                className="border-accent-foreground/30"
+                onClick={() => window.open('mailto:durucoenter12@gmail.com', '_self')}
+              >
                 Email Us
               </Button>
             </div>

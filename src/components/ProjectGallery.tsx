@@ -196,10 +196,18 @@ const ProjectGallery = () => {
             Join hundreds of satisfied customers across Nigeria who have transformed their spaces with Drenopav.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-gradient-premium hover:opacity-90 transition-opacity">
+            <Button 
+              size="lg" 
+              className="bg-gradient-premium hover:opacity-90 transition-opacity"
+              onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+            >
               Request Free Quote
             </Button>
-            <Button variant="outline" size="lg">
+            <Button 
+              variant="outline" 
+              size="lg"
+              onClick={() => window.open('https://wa.me/2348026318818?text=Hello! I would like to see more of your completed Drenopav projects.', '_blank')}
+            >
               View More Projects
             </Button>
           </div>

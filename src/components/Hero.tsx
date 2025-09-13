@@ -1,3 +1,5 @@
+"use client";
+
 import { ArrowRight, PlayCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
@@ -37,11 +39,20 @@ const Hero = () => {
           
           {/* CTAs */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-            <Button size="lg" className="bg-secondary text-secondary-foreground hover:bg-secondary/90 transition-luxury px-8 py-4 text-lg font-semibold shadow-luxury">
+            <Button 
+              size="lg" 
+              className="bg-secondary text-secondary-foreground hover:bg-secondary/90 transition-luxury px-8 py-4 text-lg font-semibold shadow-luxury"
+              onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+            >
               Book Your Free Consultation
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
-            <Button variant="outline" size="lg" className="border-primary-foreground/30 text-secondary-foreground hover:bg-primary-foreground/10 transition-luxury px-8 py-4 text-lg">
+            <Button 
+              variant="outline" 
+              size="lg" 
+              className="border-primary-foreground/30 text-secondary-foreground hover:bg-primary-foreground/10 transition-luxury px-8 py-4 text-lg"
+              onClick={() => window.open('https://wa.me/2348026318818?text=Hello! I would like to see a demonstration of how Drenopav permeable floor surfaces work.', '_blank')}
+            >
               <PlayCircle className="mr-2 h-5 w-5" />
               Watch How It Works
             </Button>
